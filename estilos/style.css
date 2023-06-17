@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../fundo1.gif);
+    background-size: contain;
+    background-position: center right;
+    background-repeat: repeat;
+    height: 100vh;
+    padding: .1em;
+}
+
+#calc {
+    width: 350px;
+    padding: 0.5em;
+    background-color: #000000;
+    color: #3a91d8e5;
+    display: flex;
+    flex-direction:column;
+    border-radius: 6px
+}
+
+#operation {
+    background-image: url(../fundo2.gif);
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    min-height: 6.0em;
+}
+
+#calc h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 300;
+    font-size: 3.0em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#operation {
+    text-align: end;
+}
+
+#previous-operation, #current-operation { /*codigos em comum*/
+    min-height: 1.7em;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+}
+
+#previous-operation {
+    color: #ffffffef
+}
+
+#current-operation {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+#buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;    
+}
+
+#buttons-container button {
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 3.5em;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
+    cursor: pointer; /* O botão do mouse apareça quando passar por cima*/
+}
+
+#buttons-container .number {
+    background-color: #f3f3f3;
+}
+
+#buttons-container button:hover {
+    background-color: #bababa;
+    border-color: #999;
+}
+
+#buttons-container #equal-btn {
+    grid-column: span 2; /*para ocupar duas linhas*/
+    background-color: #75a7cb;
+}
+
+#buttons-container #equal-btn:hover {
+    background-color: #3a91d8;
+}
